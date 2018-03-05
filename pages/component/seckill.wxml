@@ -1,0 +1,13 @@
+ 
+ <template name="seckill" id="seckill">
+   <block wx:for="{{skill}}" wx:key="name">
+    <view class="skill-li">
+        <navigator url="/pages/logs/logs">
+          <view class="skill-promotion">{{item.discount}}折</view>
+          <view class="skill-img"><image src="{{item.img}}" alt=""></image></view>
+          <view class="skill-vipprice">￥<text>{{item.now}}</text></view>
+          <view class="skill-marprice">￥{{item.price}}</view>
+        </navigator>
+      </view>
+    </block>
+</template> 

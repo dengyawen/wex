@@ -1,0 +1,10 @@
+<template name="nav">
+  <view class="navlist clearfix">
+    <block wx:for="{{navList}}" wx:key="name">
+      <navigator url="">
+        <image src="{{item.icon}}" alt=""></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </block>
+  </view>
+</template>

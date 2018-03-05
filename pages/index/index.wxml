@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<!--顶部搜索-->
+<view class="search" id="search">
+    <view class="search-inner clearfix">
+      <view class="search-l fl" id="channel">
+        <image src="../images/channel.png"/>
+      </view>
+      <view class="search-r fr">
+        <input id="search_value" type="text" placeholder="请输入要查找的内容"></input>
+      </view>
+    </view>
+</view>
+
+<!--轮播图 begin-->
+<import src="../component/banner.wxml"/>
+<template is="banner" data="{{ list }}"/>
+<!--轮播图 end-->
+
+
+<import src="../component/nav.wxml"/>
+<template is="nav" data="{{ navList }}"/>
+
+<view class='tehui'><image src="../images/tehui.png"/>【特惠】全场满39元包邮，偏远地方除外！</view>
+
+
+<!--秒杀-->
+<view class=' skill mt30' id="skill_sec">
+  <view class='skill-top clearfix'>
+    <view class="skillt-l fl"><image src="../images/skill-logo.png" alt=""></image></view>
+		<view class="skillt-m fl" id="skill_timeout">21点场<text>10</text>:<text>02</text>:<text>04</text></view>
+		<view class="skillt-r fr"><navigator url="www.baidu.com">1元秒主场<icon></icon></navigator></view>
+  </view>
+</view>
+<scroll-view scroll-x="true" class="skill-list" id="skill_list">
+  <import src="../component/seckill.wxml"/>
+  <template is="seckill" data="{{ skill }}"/>
+</scroll-view>
+
+<!--热门专题-->
+<view class="some-room mt30 clearfix">
+		<view class="sroom-l box-sizing fl">
+      <navigator url=""><image src="../images/newuser.jpg" alt=""></image></navigator>
+    </view>
+		<view class="sroom-r fr">
+			<view><navigator url=""><image src="../images/ppweek.jpg" alt=""></image></navigator></view>
+			<view><navigator url=""><image src="../images/jfsc.jpg" alt=""></image></navigator></view>
+		</view>
+</view>
+<!--横幅图片广告-1 begin-->
+<view class="guid mt30"><navigator url=""><image src="../images/guid.jpg" alt=""></image></navigator></view>
+
+<!--拼团广告 begin-->
+<view class="fine-puzzle mt30">
+		<view class="floor-title">精品拼团 <text>GROUP</text> <icon></icon></view>	
+    <scroll-view scroll-x="true" class='puzzle-list' id="puzzle-list">
+      <import src="../component/puzzle.wxml"/>
+      <template is="puzzle" data = "{{puzzle}}"/>
+    </scroll-view>
+</view>
+
+<!--横幅图片广告-3 begin-->
+	<view class="guid2 mt30"><navigator url=""><image src="../images/health1.jpg" alt=""></image></navigator></view>
+
+<!--底部 begin-->
+<import src="../component/footer.wxml"/>
+<template is="footer"/>

@@ -1,0 +1,10 @@
+<!-- 首页图标导航template begin-->
+<template name="banner">
+  <swiper class="lunbo" id="lunbo" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{list}}" wx:key="name">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

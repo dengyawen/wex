@@ -1,0 +1,25 @@
+<template name="puzzle" id="puzzle">
+  <block wx:for="{{puzzle}}" wx:key="name">
+    <view class="puzzle-li box-sizing">
+				<navigator url="">
+					<view class="puzzle-logo">
+						<text>立省</text>
+						<text>￥{{item.price}}</text>
+					</view>
+					<view class="puzzle-img"><image src="{{item.img}}" alt=""></image></view>
+					<text class="puzzle-name plr20">【包邮】{{item.name}}</text>
+					<view class="puzzle-ft plr20 clearfix">
+						<view class="puzzleft-l fl">
+							<text>￥</text>
+							<text class="puzzle-ll-text2">{{item.discount}}</text>
+							<text class="puzzle-ll-text3">/{{item.piece}}件</text>
+							<text>已售{{item.sold}}</text>
+						</view>
+						<view class="puzzleft-r fr">
+							<text class="box-sizing">{{item.number}}人团</text><text>去开团</text>
+						</view>
+					</view>
+				</navigator>
+			</view>
+  </block>
+</template>

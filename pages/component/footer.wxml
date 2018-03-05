@@ -1,0 +1,22 @@
+<template name="footer">
+  <view class="footer">
+    <view class="footer-nav">
+      <navigator url="/pages/index/index">
+        <image src='../images/footer-index.png'></image>
+        <text>首页</text>
+      </navigator>
+      <navigator url="">
+        <image src='../images/footer-cart.png'></image>
+        <text>分类</text>
+      </navigator>
+      <navigator url="">
+        <image src='../images/footer-app.png'></image>
+        <text>订单</text>
+      </navigator>
+      <navigator url="/pages/member/member">
+        <image src='../images/footer-personal.png'></image>
+        <text>个人中心</text>
+      </navigator>
+    </view>
+  </view>
+</template>
